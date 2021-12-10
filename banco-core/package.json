@@ -1,0 +1,24 @@
+{
+  "name": "banco-core",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./build/src/ index.js",
+  "scripts": {
+    "build": "rm -rf ./build && tsc",
+    "test": "mocha --recursive './build/test/*.js'"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@tsconfig/node14": "^1.0.1",
+    "@types/mocha": "^9.0.0",
+    "@types/node": "^16.7.10",
+    "@types/uuid": "^8.3.3",
+    "mocha": "^9.1.3",
+    "ts-node": "^10.2.1",
+    "typescript": "^4.4.2"
+  },
+  "dependencies": {
+    "uuid": "^8.3.2"
+  }
+}

@@ -1,0 +1,29 @@
+<div class="position-relative overflow-hidden p-3 p-5 m-3 text-center">
+  <div class="row">
+    <div class="col-md-6 col-lg-8 p-5 mx-auto my-auto">
+      <h3 class="display-3 fw-normal text-white">STACKOVER BANCO</h3>
+    </div>
+
+    <div class="col-md-6 col-lg-4 p-5 mx-auto my-5 bg-dark text-light rounded" style="border: 1px solid rgb(255, 00, 255)">
+      <div class="text-left">
+        <div class="mb-3">
+          <label for="txtNome" class="form-label">Nome</label>
+          <input [(ngModel)]="cadastro.nome" type="text" class="form-control" id="txtNome" aria-describedby="txtNome">
+        </div>
+        <div class="mb-3">
+          <label for="txtCpf" class="form-label">CPF</label>
+          <input [(ngModel)]="cadastro.cpf" type="text" class="form-control" id="txtCpf" aria-describedby="txtCpf">
+        </div>
+        <div class="mb-3">
+          <label for="txtDepositoInicial" class="form-label">Depósito Inicial</label>
+          <input [(ngModel)]="cadastro.depositoInicial" type="number" class="form-control" id="txtDepositoInicial" aria-describedby="txtDepositoInicial">
+        </div>
+        <div class="mb-3 text-center">
+          <button type="submit" class="btn btn-primary" (click)="enviar()">Abrir Conta</button>
+        </div>
+        <span>{{mensagem}}</span>
+      </div>
+    </div>
+  </div>
+</div>
+<router-outlet></router-outlet>
