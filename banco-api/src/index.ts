@@ -2,7 +2,7 @@ import express, { Request } from 'express';
 import cors from 'cors';
 import 'body-parser';
 import * as swaggerUi from 'swagger-ui-express';
-import { ContaCorrenteAppService } from 'banco-core/application-services';
+import { ApplicationServices } from 'banco-core';
 import { ICorrentistaRepository, ITransacaoRepository } from 'banco-core/interfaces';
 import { CorrentistaRepository } from './repositories/correntista.repository';
 import { IAnaliseCreditoService } from 'banco-core/interfaces/services/analise-credito.service';
@@ -19,7 +19,7 @@ const transacaoRepository: ITransacaoRepository = new TransacaoRepository();
 const analiseCreditoService: IAnaliseCreditoService = new AnaliseCreditoService();
 const emailService: IComunicacaoService = new EmailService();
 
-const contaCorrenteAppService: ContaCorrenteAppService = new ContaCorrenteAppService(
+const contaCorrenteAppService: ApplicationServices.ContaCorrenteAppService = new ApplicationServices.ContaCorrenteAppService(
     correntistaRepository,
     transacaoRepository,
     analiseCreditoService,

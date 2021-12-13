@@ -2,7 +2,7 @@
  * Copyright(c) Rafael Dias
  * MIT Licensed
  */
-import { ContaCorrenteAppService } from "../src";
+import { ApplicationServices } from "../src";
 import { ICorrentistaRepository } from "../src/interfaces/repositories/correntista.repository";
 import { ITransacaoRepository } from "../src/interfaces/repositories/transacao.repository";
 import { IAnaliseCreditoService } from '../src/interfaces/services/analise-credito.service';
@@ -78,7 +78,7 @@ export const transacaoRepository = new TransacaoRepository();
 export const analiseCreditoService = new AnaliseCredito();
 export const emailService = new EmailService();
 
-export const contaCorrenteAppService = new ContaCorrenteAppService(
+export const contaCorrenteAppService = new ApplicationServices.ContaCorrenteAppService(
     correntistaRepository,
     transacaoRepository,
     analiseCreditoService,
